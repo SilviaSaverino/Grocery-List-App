@@ -17,8 +17,15 @@ const groceryListEl = document.getElementById("grocery-list")
 
 addButton.addEventListener("click", function() {
     let inputValue = inputField.value
-    inputField.value =""
+    clearInputFieldValue()
     push(myGroceryListInDB, inputValue)
-    groceryListEl.innerHTML += `<li>${inputValue}</>`
+    appendItemIntoGroceryListEl(inputValue)
 })
 
+function appendItemIntoGroceryListEl(itemToBuy) {
+    groceryListEl.innerHTML += `<li>${itemToBuy}</>`
+}
+
+function clearInputFieldValue() {
+    inputField.value =""
+}
