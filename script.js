@@ -17,8 +17,8 @@ const groceryListEl = document.getElementById("grocery-list")
 
 addButton.addEventListener("click", function() {
     let inputValue = inputField.value
+    inputField.value =""
     push(myGroceryListInDB, inputValue)
-    groceryListEl.innerHTML += `<li>${inputValue}</> `
-    console.log(inputValue)
+    groceryListEl.innerHTML += `<li>${inputValue}</>`
 })
 
