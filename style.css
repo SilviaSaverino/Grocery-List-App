@@ -9,14 +9,16 @@ html, body {
     max-width: 320px;
     display: flex;
     flex-direction: column;
-    margin: 50px auto;
+    margin: 30px auto;
     border: 3px solid #04AC4D;
-    border-radius: 5px;    
+    border-radius: 5px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #add-button {
     background-color: #04AC4D;
     color: #fafafa;
+    font-size: 15px;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -26,6 +28,7 @@ html, body {
 
 #input-field {
     text-align: center;
+    font-size: 15px;
     background-color: beige;
     border-radius: 5px;
     padding: 10px;
