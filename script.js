@@ -12,9 +12,13 @@ const myGroceryListInDB = ref(database, "groceryList")
 
 const inputField = document.getElementById("input-field")
 const addButton = document.getElementById("add-button")
+const groceryListEl = document.getElementById("grocery-list")
+
 
 addButton.addEventListener("click", function() {
     let inputValue = inputField.value
     push(myGroceryListInDB, inputValue)
+    groceryListEl.innerHTML += `<li>${inputValue}</> `
     console.log(inputValue)
 })
+
