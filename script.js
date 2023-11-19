@@ -23,7 +23,12 @@ addButton.addEventListener("click", function() {
 })
 
 onValue(myGroceryListInDB, function(snapshot) {
-    console.log(snapshot.val())
+    let itemsInDB = Object.values(snapshot.val())
+    for (let i = 0; i < itemsInDB.length; i++){
+        let currentItemsInDB = itemsInDB[i]
+        appendItemIntoGroceryListEl(currentItemsInDB)
+    }
+    
 })
 
 function appendItemIntoGroceryListEl(itemToBuy) {
