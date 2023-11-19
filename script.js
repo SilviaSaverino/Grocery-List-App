@@ -1,6 +1,6 @@
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
     databaseURL : "https://grocery-6651f-default-rtdb.europe-west1.firebasedatabase.app/"
@@ -41,6 +41,11 @@ function appendItemIntoGroceryListEl(item) {
     let itemValue = item[1]
     let newEl = document.createElement("li")
     newEl.textContent = itemValue
+    newEl.addEventListener("click", function(){
+        let locationOfItemInDB = ref(database, `groceryList/${itemID}`)
+        remove(locationOfItemInDB)
+    })
+
     groceryListEl.append(newEl)
 }
 
