@@ -22,10 +22,13 @@ addButton.addEventListener("click", function() {
 })
 
 onValue(myGroceryListInDB, function(snapshot) {
-    let itemsInDB = Object.values(snapshot.val())
+    let itemsInDB = Object.entries(snapshot.val())
     clearGroceryListEl()
     for (let i = 0; i < itemsInDB.length; i++){
-        appendItemIntoGroceryListEl(itemsInDB[i])
+        let currentItem = itemsInDB[i]
+        let currentItemID = currentItem[0]
+        let currentItemValue = currentItem[1]
+        appendItemIntoGroceryListEl(currentItem)
     }  
 })
 
@@ -33,8 +36,12 @@ function clearGroceryListEl() {
     groceryListEl.innerHTML = ""
 }
 
-function appendItemIntoGroceryListEl(itemToBuy) {
-    groceryListEl.innerHTML += `<li>${itemToBuy}</>`
+function appendItemIntoGroceryListEl(item) {
+    let itemID = item[0]
+    let itemValue = item[1]
+    let newEl = document.createElement("li")
+    newEl.textContent = itemValue
+    groceryListEl.append(newEl)
 }
 
 function clearInputFieldValue() {
