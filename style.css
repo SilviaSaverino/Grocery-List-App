@@ -22,8 +22,9 @@ html, body {
     border: none;
     border-radius: 5px;
     padding: 10px;
-    margin: 0 10px 10px;
+    margin: 0 10px;
     font-family: 'Montserrat', sans-serif;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 #input-field {
@@ -35,4 +36,24 @@ html, body {
     margin: 10px 10px;
     border: 1px solid #04AC4D;
     font-family: 'Montserrat', sans-serif;
+}
+
+ul {
+    padding: 0 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 10px;
+    justify-content: center;
+}
+
+ul li {
+    padding: 10px;
+    border: 1px solid green;
+    border-radius: 5px;
+    color: #fafafa;
+    background-color:  #EC4D43;
+    flex-grow: 1;
+    text-align: center;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
 }
