@@ -22,16 +22,21 @@ addButton.addEventListener("click", function() {
 })
 
 onValue(myGroceryListInDB, function(snapshot) {
-    let itemsInDB = Object.entries(snapshot.val())
-    clearGroceryListEl()
-    for (let i = 0; i < itemsInDB.length; i++){
-        let currentItem = itemsInDB[i]
-        let currentItemID = currentItem[0]
-        let currentItemValue = currentItem[1]
-        appendItemIntoGroceryListEl(currentItem)
-    }  
+    
+    if (snapshot.exists()){
+        let itemsInDB = Object.entries(snapshot.val())
+        clearGroceryListEl()
+        for (let i = 0; i < itemsInDB.length; i++){
+            let currentItem = itemsInDB[i]
+            let currentItemID = currentItem[0]
+            let currentItemValue = currentItem[1]
+            appendItemIntoGroceryListEl(currentItem)
+        } 
+    } else {
+        groceryListEl.innerHTML = "No items in your list...yet"
+    }
+     
 })
-
 function clearGroceryListEl() {
     groceryListEl.innerHTML = ""
 }
