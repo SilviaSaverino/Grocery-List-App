@@ -19,7 +19,6 @@ addButton.addEventListener("click", function() {
     let inputValue = inputField.value
     clearInputFieldValue()
     push(myGroceryListInDB, inputValue)
-    appendItemIntoGroceryListEl(inputValue)
 })
 
 onValue(myGroceryListInDB, function(snapshot) {
