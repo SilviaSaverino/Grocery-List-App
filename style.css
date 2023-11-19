@@ -2,6 +2,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    user-select: none;
 }
 
 .container {
@@ -19,12 +20,17 @@ html, body {
     background-color: #04AC4D;
     color: #fafafa;
     font-size: 15px;
-    border: none;
+    border: 1px solid  #04AC4D;
     border-radius: 5px;
     padding: 10px;
     margin: 0 10px;
     font-family: 'Montserrat', sans-serif;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+#add-button:hover {
+    background-color: #039843;
+    border: 1px solid  #07f16d
 }
 
 #input-field {
@@ -49,11 +55,16 @@ ul {
 
 ul li {
     padding: 10px;
-    border: 1px solid green;
+    border: 1px solid #EC4D43;
     border-radius: 5px;
     color: #fafafa;
     background-color:  #EC4D43;
     flex-grow: 1;
     text-align: center;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+ul li:hover {
+    background-color: #c73f35;
+    border: 1px solid #f87b72;
 }
