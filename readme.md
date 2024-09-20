@@ -1,5 +1,5 @@
 # Grocery List 'App'
--Live site on: https://silviasaverino.github.io/Grape-Escape-WWOOFing-Experience/
+-Live site on: https://silviasaverino.github.io/Grocery-List-App/
 
 ### Overview
 The Grocery List 'App' is a simple web application that allows users to create and manage their grocery lists. Users can add items to the list, and the application will store the list in a Firebase Realtime Database. The interface is designed to be user-friendly and visually appealing.
